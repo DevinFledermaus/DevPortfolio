@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Devin Fledermaus | Fullstack Developer Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/cce18f0ce0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li class="navbar-link">
+                    <a href="#landing-page">Home</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="#about-page">About</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="#projects-page">Projects</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="#testimonials-page">Testimonials</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="#contact-page">Contact</a>
+                </li>
+            </ul>
+            <h1>DF.</h1>
+            <button>
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Landing Page -->
+        <section class="landing-page" id="landing-page">
+            <div class="main-title">
+                <p id="sentence" class="sentence">Hi <span class="wave">👋</span>, I am</p>
+                <span id="feature-text"></span>
+                <span class="input-cursor"></span>
+            </div>
+        </section>
+        <!-- About Me Page -->
+        <section class="about-page" id="about-page">
+            <h3>About Me</h3>
+            <p>I am a very open-minded and diligent person. I am quite shy but have
+                started coming out of my shell more and more. I can be quite stubborn,
+                headstrong, and can be very straightforward and honest, but not
+                without kindness, often referring to myself as a "jerk with a heart of
+                gold". I have a dreamer's mindset and an adventurer's heart. I also
+                love being a jack of all trades(master of some) to fit or play any
+                role needed. My greatest desire, irrespective of my career, is to be a
+                family man.
+            </p>
+            <h3>Where my passion for coding comes from?</h3>
+            <p>I've always loved video games, so it's not that big of a surprise that
+                in the tech industry, game development is my main goal. The older I
+                got the more I started asking questions to myself and became more and
+                more curious about how these games were put together and how they
+                work.
+            </p>
+            <div class="experience-col">
+                <ul>
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="text">
+                      <h4>Life Choices Academy</h4>
+                      <h4>Full-stack Developer course (April 2021-September 2021)</h4>
+                    </div>
+                </ul>
+                <ul>
+                    <i class="fas fa-laptop-code"></i>
+                    <div class="text">
+                      <h4>Life Choices Studio</h4>
+                      <h4>Full-stack Developer Internship (September 2021-Present)</h4>
+                    </div>
+                </ul>
+            </div>
+            <div class="techstacks">
+                <div class="skill-icon">
+                  <i class="fab fa-python"></i>
+                  <p>PYTHON</p>
+                </div>
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                  <p>CSS</p>
+                </div>
+                <div class="skill-icon">
+                    <i class="fab fa-js-square"></i>
+                    <p>JAVASCRIPT</p>
+                </div>
+              </div>
+        </section>
+        <!-- Projects Page -->
+        <section class="projects-page" id="projects-page">
+            <div class="projects-heading">
+                <h3>Portfolio</h3>
+                <h2>That I've Accomplished</h2>
+            </div>
+            <div class="project-buttons">
+                <button onclick="filterCards('All')" id="All">ALL</button>
+                <button onclick="filterCards('HTML/CSS')">Front End Projects</button>
+                <button onclick="filterCards('Python')">Back End Projects</button>
+            </div>
+            <div class="projects-content">
+                <div class="container">
+                    <div class="project-cards"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Page -->
+        <section class="testimonials-page" id="testimonials-page">
+            <div class="testimonials-heading">
+                <h3>Testimonials</h3>
+                <h2>Stories</h2>
+            </div>
+            <div class="owl-carousel">
+                <!-- Card One -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >The best way to describe Devin is charismatic. His sense of humor
+                        and quick wit will leave a long lasting impression on you.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img
+                        src="./images/2021-team-jason-wandrag.jpg"
+                        alt="Person image"
+                      />
+                      <div class="text">
+                        <h5>Jason Wandrag</h5>
+                        <h6>Front End Lecturer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Two -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devin is a tremendous student. He has a great personality and
+                        works well within a team. He’s ability to learn new technologies
+                        is incredible. He always asks relevant questions when the user
+                        requirements are no clear. He can be a great asset to your
+                        team.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img src="./images/thapelo-tsotetsi.jpg" alt="Person image" />
+                      <div class="text">
+                        <h5>Thapelo Tsotetsi</h5>
+                        <h6>Back End Lecturer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Three -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devins skills of learning new technology and figuring solutions
+                        by himself is out of this world. He’s communication skills are
+                        exceptional and he is a very live person. He always know when to
+                        ask for assistance. He is a great Full-stack developer in
+                        training.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img src="./images/Shuaib Dollie (2).JPG" alt="Person image" />
+                      <div class="text">
+                        <h5>Shuaib Dollie</h5>
+                        <h6>Peer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Four -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devin is a passive individual. Extremely kind and charismatic. I
+                        don't think I've seen a day where he's not smiling. Intellectually
+                        gifted and an asset to any business.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img
+                        class="nae-img"
+                        src="./images/nae.JPG"
+                        alt="Person image"
+                      />
+                      <div class="text">
+                        <h5>Naeemah Davis</h5>
+                        <h6>Peer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Five -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devin in my opinion is a determined man that pushes himself to
+                        better himself each day. He is a persistent person when it comes
+                        to his work.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img src="./images/Nasar Kamish (3).JPG" alt="Person image" />
+                      <div class="text">
+                        <h5>Nasar Kamish</h5>
+                        <h6>Peer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Six -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devin is skilled at all that he focuses on. He plans ahead and
+                        finishes all that he sets in mind within his time frame. He is an
+                        exceptional peer and he will undoubtably succeed in all he plans
+                        to accomplish.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img
+                        src="./images/Abdur-Razaa Jardien (2).JPG"
+                        alt="Person image"
+                      />
+                      <div class="text">
+                        <h5>Abdur-Razaaq Jardien</h5>
+                        <h6>Peer</h6>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Seven -->
+                <div class="test-card">
+                    <div class="upper">
+                        <h4>Testimonial</h4>
+                        <q
+                        >Devin is a smart, hard-working individual, with alot of potential
+                        as a developer and will definitely raise the standards as an
+                        employee, a valuable asset to have on a team.</q
+                        >
+                    </div>
+                    <div class="lower">
+                      <img
+                        src="./images/Yamkela Mathontsi (2).JPG"
+                        alt="Person image"
+                      />
+                      <div class="text">
+                        <h5>Yamkela Mathontsi</h5>
+                        <h6>Peer</h6>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Page -->
+        <section class="contact-page" id="contact-page">
+            <div class="btn" id="button">
+                <button onclick="activate()">Contact Me</button>
+            </div>
+            <div class="my-image" id="hidden">
+                <img
+                  class="image"
+                  src="./images/Devin Fledermaus (1).JPG"
+                  alt="Picture"
+                />
+            </div>
+            <div class="contact-content" id="hidden">
+                <div class="contact-heading">
+                    <h3>Contact Me</h3>
+                    <h2>Get in contact with me via email</h2>
+                </div>
+                <div class="contact-text">
+                    <p>You can send me an email by inputting your Fullname and email
+                        address, then type your message in the bottom box. I'l get back to
+                        you as soon as possible.
+                    </p>
+                </div>
+                <form
+                    action="https://formspree.io/f/xknkeabk"
+                    method="POST"
+                    class="contact-form"
+                >
+                    <div class="inputs">
+                        <!--FullName-->
+                        <div class="name-input">
+                            <label for="name" class="contact-info">FullName</label>
+                            <input
+                                type="text"
+                                class="contact-input"
+                                name="name"
+                                id="name"
+                                placeholder="FullName"
+                                required
+                            />
+                        </div>
+                        <!--Email-->
+                        <div class="email-input">
+                            <label for="email" class="contact-info">Email</label>
+                            <input
+                                type="email"
+                                class="contact-input"
+                                name="email"
+                                id="email"
+                                placeholder="name@domain.com"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <!--Message-->
+                    <div class="contact-message">
+                        <label for="message" class="contact-info">Your message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            class="contact-input"
+                            placeholder="Your Message"
+                        ></textarea>
+                    </div>
+                    <!--Button-->
+                    <div class="buttons">
+                        <div class="btn1">
+                            <button type="reset">Reset</button>
+                        </div>
+                        <div class="btn2">
+                            <button type="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-title">MADE by DEVIN FLEDERMAUS</div>
+            <div class="social-links">
+                <a href="https://github.com/Koumori97" target="_blank"><i class="fab fa-github-alt"></i></a>
+                <a href="https://www.linkedin.com/in/devin-fledermaus-23a091221/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 2,
+        // margin: 50,
+        loop: true,
+        // stagePadding: 100,
+        dots: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+            // nav:true
+          },
+          1038: {
+            items: 2,
+            // nav:false
+          },
+        },
+      });
+    });
+  </script>
+    <script src="/javascript/contact.js"></script>
+    <script src="/javascript/filter.js"></script>
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/project-cards.js"></script>
+</body>
+</html>

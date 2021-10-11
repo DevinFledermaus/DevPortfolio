@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* Navbar */
+nav button {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    background: none;
+    color: white;
+    border: none;
+}
+
+nav h1 {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    background: none;
+    color: white;
+    border: none;
+}
+
+.navbar-links {
+    display: none;
+}
+
+/* Landing */
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-title span {
+    font-size: 4em;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+} 
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0.0deg); }
+    10% { transform: rotate(14.0deg); }
+    20% { transform: rotate(-8.0deg); }
+    30% { transform: rotate(14.0deg); }
+    40% { transform: rotate(-4.0deg); }
+    50% { transform: rotate(10.0deg); }
+    60% { transform: rotate(0.0deg); }
+    100% { transform: rotate(0.0deg); }
+}
+
+/* About */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    text-align: center;
+}
+
+.experience-col {
+    display: flex;
+    gap: 20px;
+}
+
+.text h4 {
+    color: white;
+}
+
+
+/* Projects */
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 1px white;
+    background: white;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 1px red;
+    width: 80vw;
+}
+
+.project-cards .card {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.card-content {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5%;
+}
+  
+.card-content:hover {
+    opacity: 1;
+}
+
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Contact_Form.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.card2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Timeline.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.card3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Testimonial_slider.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.card4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Temperture_converter.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.card5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/Recursion.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.card6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/Speedster.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Testimonials */
+.testimonials-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+.test-card img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.owl-carousel {
+    border: solid 1px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.test-card {
+    margin: 10px;
+    padding: 15px;
+    height: 300px;
+    width: 500px;
+    background: white;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    width: 50vw;
+}
+
+.lower {
+    width: 50vw;
+
+}
+
+.test-card h4, h5, h6, q {
+    color: black;
+}
+
+/* Contact */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#hidden{
+    display: none;
+}
+
+.my-image > img {
+    height: 350px;
+    width: 550px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    position: relative;
+    height: 50px;
+}
+
+.footer-title{
+    display: flex;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    position: absolute;
+    right: 2%;
+    top: 25%;
+    gap: 30px;
+}
+
+.social-links i {
+    color: black;
+
+}
