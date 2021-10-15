@@ -30,24 +30,36 @@
         <nav class="navbar">
             <ul class="navbar-links">
                 <li class="navbar-link">
-                    <a href="#landing-page">Home</a>
+                    <a href="#landing-page" onclick="toggleMenu()" class="navbar-anchor">
+                      <h2>Home</h2>
+                    </a>
                 </li>
                 <li class="navbar-link">
-                    <a href="#about-page">About</a>
+                    <a href="#about-page" onclick="toggleMenu()" class="navbar-anchor">
+                      <h2>About</h2>
+                    </a>
                 </li>
                 <li class="navbar-link">
-                    <a href="#projects-page">Projects</a>
+                    <a href="#projects-page" onclick="toggleMenu()" class="navbar-anchor">
+                      <h2>Projects</h2>
+                    </a>
                 </li>
                 <li class="navbar-link">
-                    <a href="#testimonials-page">Testimonials</a>
+                    <a href="#testimonials-page" onclick="toggleMenu()" class="navbar-anchor">
+                      <h2>Testimonials</h2>
+                    </a>
                 </li>
                 <li class="navbar-link">
-                    <a href="#contact-page">Contact</a>
+                    <a href="#contact-page" onclick="toggleMenu()" class="navbar-anchor">
+                      <h2>Contact</h2>
+                    </a>
                 </li>
             </ul>
-            <h1>DF.</h1>
-            <button>
-                <i class="fas fa-bars"></i>
+            <div class="box">
+              <h1>DF.</h1>
+            </div>
+            <button class="menu-btn" onclick="toggleNavbar()">
+              <div class="menu-btn__burger"></div>
             </button>
         </nav>
         <!-- Landing Page -->
@@ -330,7 +342,7 @@
                                 class="contact-input"
                                 name="email"
                                 id="email"
-                                placeholder="name@domain.com"
+                                placeholder="Name@domain.com"
                                 required
                             />
                         </div>
@@ -347,10 +359,10 @@
                     </div>
                     <!--Button-->
                     <div class="buttons">
-                        <div class="btn1">
+                        <div class="form-btn btn1">
                             <button type="reset">Reset</button>
                         </div>
-                        <div class="btn2">
+                        <div class="form-btn btn2">
                             <button type="submit">Send</button>
                         </div>
                     </div>
@@ -358,12 +370,12 @@
             </div>
         </section>
         <footer>
-            <div class="footer-title">MADE by DEVIN FLEDERMAUS</div>
-            <div class="social-links">
-                <a href="https://github.com/Koumori97" target="_blank"><i class="fab fa-github-alt"></i></a>
-                <a href="https://www.linkedin.com/in/devin-fledermaus-23a091221/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </footer>
+          <div class="footer-title">MADE by DEVIN FLEDERMAUS</div>
+          <div class="social-links">
+              <a href="https://github.com/Koumori97" target="_blank"><i class="fab fa-github-alt"></i></a>
+              <a href="https://www.linkedin.com/in/devin-fledermaus-23a091221/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </footer>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.6.0.slim.min.js"

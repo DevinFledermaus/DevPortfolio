@@ -3,7 +3,7 @@
 // Typing Effect for Landing Page
 
 const carouselText = [
-    {text: "Devin Fledermaus", color: "red"},
+    {text: "Devin Fledermaus", color: "blue"},
     {text: "A Full Stack Developer", color: "orange"}
   ]
   
@@ -53,3 +53,13 @@ const carouselText = [
   function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
+
+const menuBtn = document.querySelector('.menu-btn');
+const nsvbarLinks = document.querySelector(".navbar-links li a")
+let menuOpen = false;
+menuBtn.addEventListener('click', () =>  toggleMenu() );
+
+function toggleMenu() {
+  document.getElementsByClassName("navbar-links")[0].classList.toggle("active");
+  menuBtn.classList.toggle("open")
+}
