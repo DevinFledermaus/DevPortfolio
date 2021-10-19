@@ -54,6 +54,7 @@ const carouselText = [
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
+// NavBar JS
 const menuBtn = document.querySelector('.menu-btn');
 const nsvbarLinks = document.querySelector(".navbar-links li a")
 let menuOpen = false;
@@ -62,4 +63,53 @@ menuBtn.addEventListener('click', () =>  toggleMenu() );
 function toggleMenu() {
   document.getElementsByClassName("navbar-links")[0].classList.toggle("active");
   menuBtn.classList.toggle("open")
+}
+
+// Testimonials Page JS
+let slides = document.querySelectorAll('.slide-container');
+let index = 0;
+
+function next() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+// Contact Page JS
+function activate() {
+  let hidden = document.querySelectorAll("#hidden");
+  hidden.forEach((poke) => {
+    poke.style.display = "block ";
+  });
+  let button = document.querySelectorAll(".btn");
+  button.forEach((btn) => {
+    btn.style.display = "none";
+  });
+}
+
+// Project Page JS
+function filterCards(category) {
+  let cards = document.getElementsByClassName("card");
+  if (category == "All") {
+    for (card of cards) {
+      card.style.display = "block";
+    }
+    return;
+  }
+  for (card of cards) {
+    console.log(card);
+    card.style.display = "none";
+  }
+
+  let selectedCards = document.querySelectorAll(`[techStack='${category}']`);
+
+  for (card of selectedCards) {
+    card.style.display = "block";
+  }
 }
