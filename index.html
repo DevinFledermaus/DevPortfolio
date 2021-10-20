@@ -130,14 +130,61 @@
                 <h3>Portfolio</h3>
                 <h2>That I've Accomplished</h2>
             </div>
-            <div class="project-buttons">
-                <button onclick="filterCards('All')" id="All">ALL</button>
-                <button onclick="filterCards('HTML/CSS')">Front End Projects</button>
-                <button onclick="filterCards('Python')">Back End Projects</button>
+            <div class="project-filter-buttons">
+                <ul id="filter-btns">
+                    <li class="active" techStack="all">All</li>
+                    <li techStack="HTML/CSS">HTML/CSS</li>
+                    <li techStack="Python">Python</li>
+                </ul>
             </div>
-            <div class="projects-content">
-                <div class="projects-container">
-                    <div class="project-cards"></div>
+            <div class="projects-container">
+                <div class="panel active" techStack="HTML/CSS" style="background-image: url('./images/Contact_Form.png');">
+                    <h2>Contact Form</h2>
+                    <p>My first attempt at making a contact form</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/Contact-Form" target="_blank"><button>Github</button></a>
+                        <a href="https://nifty-poitras-1e242c.netlify.app/" target="_blank"><button>Live</button></a>
+                    </div>
+                </div>
+                <div class="panel" techStack="Python" style="background-image: url('./images/Recursion.png');">
+                    <h2>Recursion Task</h2>
+                    <p>Writing A Program to generate a fibonacci series until the 20th value.</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/Fibonacci" target="_blank"><button>Github</button></a>
+                        <a href="https://replit.com/join/xmjwupar-devinfledermaus" target="_blank"><button>Live</button></a>
+                    </div>
+                </div>
+                <div class="panel" techStack="Python" style="background-image: url('./images/Speedster.png');">
+                    <h2>Speedster Task</h2>
+                    <p>Writing A Program that cheacks one's speed limit and assigns points accordingly.</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/midrand_speedster_project" target="_blank"><button>Github</button></a>
+                        <a href="https://replit.com/@DevinFledermaus/Midrand-speedster-task#main.py" target="_blank"><button>Live</button></a>
+                    </div>
+                </div>
+                <div class="panel" techStack="Python" style="background-image: url('./images/Temperture_converter.png');">
+                    <h2>Temperature Convertor</h2>
+                    <p>Using Tkinter, wrote a program that converts celsius to fahrenheit and vice versa.</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/Tempaerature_converter" target="_blank"><button>Github</button></a>
+                        <a href="https://replit.com/@DevinFledermaus/Temperature-Convertor#main.py" target="_blank"><button>Live</button></a>
+                    </div>
+                </div>
+                <div class="panel" techStack="HTML/CSS" style="background-image: url('./images/Testimonial_slider.png');">
+                    <h2>Testimonial Slider</h2>
+                    <p>My First Attempt at creating a slider.</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/Testimonial_slider" target="_blank"><button>Github</button></a>
+                        <a href="https://sharp-neumann-59d40c.netlify.app/" target="_blank"><button>Live</button></a>
+                    </div>
+                </div>
+                <div class="panel" techStack="HTML/CSS" style="background-image: url('./images/Timeline.png');">
+                    <h2>Timeline</h2>
+                    <p>My First Attempt at creating a Timeline with animations.</p>
+                    <div class="proj-buttons">
+                        <a href="https://github.com/Koumori97/My_Timeline" target="_blank"><button>Github</button></a>
+                        <a href="https://gracious-clarke-14304e.netlify.app/" target="_blank"><button>Live</button></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -360,6 +407,5 @@
     crossorigin="anonymous"
   ></script>
     <script src="/javascript/script.js"></script>
-    <script src="/javascript/project-cards.js"></script>
 </body>
 </html>

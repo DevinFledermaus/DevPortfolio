@@ -94,22 +94,40 @@ function activate() {
 }
 
 // Project Page JS
-function filterCards(category) {
-  let cards = document.getElementsByClassName("card");
-  if (category == "All") {
-    for (card of cards) {
-      card.style.display = "block";
+const panels = document.querySelectorAll('.panel')
+
+panels.forEach(panel => {
+  panel.addEventListener('click', () => {
+    removeActiveClasses()
+    panel.classList.add('active')
+  })
+})
+function removeActiveClasses() {
+  panels.forEach(panel => {
+    panel.classList.remove('active')
+  })
+}
+
+  // Filter
+const filterButtons = document.querySelector("#filter-btns").children;
+const items = document.querySelector(".projects-container").children;
+
+for (let i = 0; i < filterButtons.length; i++) {
+  filterButtons[i].addEventListener("click", function () {
+    for (let x = 0; x < filterButtons.length; x++) {
+      filterButtons[x].classList.remove("active")
     }
-    return;
-  }
-  for (card of cards) {
-    console.log(card);
-    card.style.display = "none";
-  }
+    this.classList.add("active");
+    const target = this.getAttribute("techStack")
 
-  let selectedCards = document.querySelectorAll(`[techStack='${category}']`);
-
-  for (card of selectedCards) {
-    card.style.display = "block";
-  }
+    for (let n = 0; n < items.length; n++) {
+      items[n].style.display = "none";
+      if (target == items[n].getAttribute("techStack")) {
+        items[n].style.display = "block";
+      }
+      if (target == "all") {
+        items[n].style.display = "block"
+      }
+    }
+  })
 }
