@@ -7,6 +7,7 @@
 body {
     background-color: rgb(22, 22, 22);
     color: white;
+    font-family: sans-serif;
 }
 
 button:hover {
@@ -290,13 +291,15 @@ a h2 {
     100% { transform: rotate(0.0deg); }
 }
 
+
+
 /* About */
 .about-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     height: 100vh;
     text-align: center;
     margin: auto 150px;
@@ -323,7 +326,7 @@ a h2 {
 .techstacks {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 150px;
 }
 
 .skill-icon i {
@@ -565,6 +568,7 @@ a h2 {
 .container .slide-container .slide .user h3, h4 {
     color: #333;
     font-size: 25px;
+    text-align: left;
 }
 
 .container .slide-container .slide .text {
@@ -638,9 +642,22 @@ a h2 {
     align-items: center;
 }
 
+.contact-content .contact-heading h3 {
+    font-size: 2.5em;
+}
+
+.contact-content .contact-heading h4 {
+    font-size: 1.5em;
+}
+
+.contact-content .contact-heading {
+    margin-bottom: 10px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .contact-info {
@@ -735,6 +752,15 @@ textarea {
     opacity: 1;
     z-index: -1;
     color: white;
+}
+
+@media screen and (max-width: 1200px ) {
+    .my-image > img {
+        height: 250px;
+        width: 300px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
 }
 
 
