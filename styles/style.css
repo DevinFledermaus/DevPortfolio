@@ -138,7 +138,7 @@ nav button {
     position: fixed;
     top: 0;
     right: -110%;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     text-transform: uppercase;
     gap: 20px;
@@ -371,12 +371,19 @@ a h2 {
 
 .techstacks {
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    gap: 150px;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin: 0px 150px;
 }
 
 .skill-icon i {
     font-size: 50px;
+}
+
+.skill-icon img {
+    background-color: white;
 }
 
 @media screen and (max-width: 762px) {
@@ -849,7 +856,7 @@ footer{
     background-color: white;
     color: black;
     position: relative;
-    height: 50px;
+    height: 50px;   
 }
 
 .footer-title{
@@ -871,6 +878,6 @@ footer{
 
 @media screen and (max-width: 760px) {
     footer {
-        
+        width: 100%;
     }
 }
