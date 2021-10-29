@@ -474,6 +474,12 @@ a h2 {
     }
 }
 
+@media screen and (max-width: 375px) {
+    .techstacks {
+        gap: 0px;
+    }    
+}
+
 @media screen and (max-width: 320px) {
     .about-page {
         margin-top: 350px;
@@ -812,10 +818,10 @@ a h2 {
     }
 
     .container #next {
-        right: 35%;
+        right: 30%;
     }
     .container #prev {
-        left: 35%;
+        left: 30%;
     }
 }
 
@@ -875,6 +881,7 @@ a h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
 }
 
 .contact-content .contact-heading h3 {
@@ -1013,8 +1020,16 @@ textarea {
     }
 }
 
-@media screen and (max-width: 762px) {
-    
+@media screen and (max-width: 516px) {
+    .my-image > img {
+        display: none;
+    }
+
+    .contact-content {
+        margin: 0px -130px;
+        display: flex;
+
+    }
 }
 
 
@@ -1051,4 +1066,11 @@ footer{
     footer {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 425px) {
+    .footer-title {
+        font-size: 0.7em;
+    }
+    
 }
