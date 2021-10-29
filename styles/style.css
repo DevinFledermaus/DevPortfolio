@@ -670,6 +670,12 @@ a h2 {
     }
 }
 
+@media screen and (max-width: 320px) {
+    .projects-page {
+        margin-top: 420px;
+    }
+}
+
 /* Testimonials */
 .testimonials-page {
     display: flex;
