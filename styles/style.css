@@ -538,149 +538,100 @@ a h2 {
 }
 
 .projects-container {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    width: 90vw;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin: 25px 10px;
+    max-width: 1100px;
 }
 
-.panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 50vh;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
+.projects-container .card {
     position: relative;
-    -webkit-transition: all 300ms ease-in-out;
-}
-.panel.active {
-    flex: 5;
-}
-
-.panel h2, .panel p, .proj-buttons {
-    display: none;
-    transition: all 0.1s linear;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 5px;
-}
-.panel:hover.active h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 300ms ease-in 0.4s;
-    margin-top: 100px;
-}
-.panel:hover.active p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    transition: opacity 300ms ease-in 0.4s;
-}
-.panel:hover.active .proj-buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: opacity 300ms ease-in 0.4s;
+    width: 320px;
+    height: 200px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
-.proj-buttons a button{
-    width: 100px;
-    height: 40px;
-    border: none;
-    color: black;
-    border-radius: 4px;
-    transition: ease-out 0.3s;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    outline: none;
-    position: relative;
-    z-index: 1;
-}
-
-.proj-buttons a button:hover {
-    color: white;
-    cursor: pointer;
-}
-
-.proj-buttons a button:before {
-    transition: 0.5s all ease;
+.projects-container .card .imgBox,
+.projects-container .card .contentBox {
     position: absolute;
     top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: #0575E6;
-    border-radius: 4px;
-}
-
-.proj-buttons a button:hover:before {
-    transition: 0.5s all ease;
     left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-    color: white;
+    width: 100%;
+    height: 100%;
 }
 
-@media (max-width:480px) {
-    .container {
-        width: 100vw;
-    }
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
+.projects-container .card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-@media screen and (max-width: 708px) {
-    .projects-page {
-        margin-top: 100px;
-    }
+.projects-container .card .contentBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+    transition-delay: 0.5s;
 }
 
-@media screen and (max-width: 630px) {
-    .projects-page {
-        margin-top: 150px;
-    }
+.projects-container .card:hover .contentBox::before {
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+    transition-delay: 0s;
 }
 
-@media screen and (max-width: 566px) {
-    .projects-page {
-        margin-top: 200px;
-    }
+.projects-container .card .contentBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-@media screen and (max-width: 425px) {
-    .projects-page {
-        margin-top: 250px;
-    }
-    .panel {
-        flex: 1;
-    }
+.projects-container .card .contentBox .content {
+    position: relative;
+    display: grid;
+    place-items: center ;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-300px);
+    transition-delay: 0s;
+}
+.projects-container .card:hover .contentBox .content {
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+.projects-container .card .contentBox .content h2 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    padding: 1px;
+    border-radius: 5px;
 }
 
-@media screen and (max-width: 381px) {
-    .projects-page {
-        margin-top: 300px;
-    }
+.projects-container .card .contentBox .content p {
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+    color: #000;
 }
 
-@media screen and (max-width: 320px) {
-    .projects-page {
-        margin-top: 420px;
-    }
-}
 
 /* Testimonials */
 .testimonials-page {
@@ -707,69 +658,73 @@ a h2 {
 
 .container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 75px 7px;
     perspective: 1000px;
 }
 
-.container .slide-container .slide {
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 5px 10px #3337;
-    max-width: 1000px;
-    height: 300px;
-    padding: 20px;
-    margin: 10px;
+.container .slide-container {
     position: relative;
-    transform-style: preserve-3d;
-    animation:slide .4s linear;
-}
-
-@keyframes slide {
-    0% {
-        transform: rotateX(180deg);
-    }
-}
-
-.container .slide-container .slide > * {
-    animation: slideContent .2s linear .4s backwards;
-}
-
-@keyframes slideContent {
-    0% {
-        opacity: 0;
-        transform: scale(.5);
-    }
-}
-
-.container .slide-container .slide .user {
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    margin-top: 80px;
     display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
     align-items: center;
+    background: linear-gradient(45deg, #0575E6, #fc4a1a);
 }
 
-.container .slide-container .slide .user .user-title {
-    display: flex;
-    flex-direction: column;
+.container .slide-container img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    transition: 0.5s;
 }
 
-.container .slide-container .slide img {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+.container .slide-container:hover img {
+    left: 80%;
+    height: 450px;
 }
 
-.container .slide-container .slide .user h3, h4 {
-    color: #333;
-    font-size: 25px;
-    text-align: left;
+.container .slide-container .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
-.container .slide-container .slide .text {
-    color: #333;
-    font-size: 17px;
-    padding-top: 20px;
+.container .slide-container:hover .content {
+    left: -30%;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.container .slide-container .content h3 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.container .slide-container .content h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-decoration-line: underline;
+}
+
+.container .slide-container .content q {
     font-style: italic;
 }
+
 
 .container .slide-container {
     display: none;
@@ -871,68 +826,128 @@ a h2 {
     display: none;
 }
 
-.my-image > img {
-    height: 250px;
-    width: 400px;
-    object-fit: contain;
+.contact-container {
+    width: 80%;
+    padding: 20px;
 }
 
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-
-.contact-content .contact-heading h3 {
-    font-size: 2.5em;
-}
-
-.contact-content .contact-heading h4 {
-    font-size: 1.5em;
-}
-
-.contact-content .contact-heading {
+.contact-container h2 {
+    width: 100%;
+    color: #fc4a1a;
+    font-size: 36px;
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.contact-form {
+.contact-container .info {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
 }
 
-.contact-info {
-    display: none;
-}
-
-.contact-input {
+.contact-container .row100 {
+    position: relative;
     width: 100%;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(
+        300px,1fr));
 }
 
-.inputs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.contact-container .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
 }
 
-input {
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin: 10px 0;
+.contact-container .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #0575E6;
 }
 
-textarea {
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin: 10px 0;
+.contact-container .row100 .inputBox input,
+.contact-container .row100 .inputBox.textarea textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.contact-container .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contact-container .row100 .inputBox input:focus + .text,
+.contact-container .row100 .inputBox input:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+
+.contact-container .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0575E6;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.contact-container .row100 .inputBox input:focus ~ .line,
+.contact-container .row100 .inputBox input:valid ~ .line {
+    height: 100%;
+}
+
+.contact-container .row100 .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.contact-container .row100 .inputBox.textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+.contact-container .row100 .inputBox textarea:focus + .text,
+.contact-container .row100 .inputBox textarea:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+.contact-container .row100 .inputBox textarea:focus ~ .line,
+.contact-container .row100 .inputBox textarea:valid ~ .line {
+    height: 100%;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #0575E6;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
 }
 
 .btn button {
@@ -953,81 +968,10 @@ textarea {
     cursor: pointer;
 }
 
-.form-btn button{
-    width: 150px;
-    height: 40px;
-    border: none;
-    color: black;
-    border-radius: 4px;
-    transition: ease-out 0.3s;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    outline: none;
-    position: relative;
-    z-index: 1;
-}
-
-.form-btn button:hover {
-    color: white;
-    cursor: pointer;
-}
-
-.form-btn button:before {
-    transition: 0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: #0575E6;
-    border-radius: 4px;
-}
-
-.form-btn button:hover:before {
-    transition: 0.5s all ease;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-    color: white;
-}
-
-@media screen and (max-width: 1200px ) {
-    .my-image > img {
-        height: 250px;
-        width: 300px;
-        object-fit: contain;
-        margin-right: 10px;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .form-btn button {
-        width: 120px;
-    }
-}
-
-@media screen and (max-width: 852px) {
-    .form-btn button {
-        width: 100px;
-    }
-    .buttons {
-        gap: 5px;
-    }
-}
-
-@media screen and (max-width: 516px) {
-    .my-image > img {
-        display: none;
-    }
-
-    .contact-content {
-        margin: 0px -130px;
+@media (max-width: 991px) {
+    .contact-container .info {
         display: flex;
+        flex-direction: column;
     }
 }
 
