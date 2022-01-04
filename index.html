@@ -26,55 +26,27 @@
 </head>
 <body>
     <div class="main-content">
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="navbar-links">
-                <li class="navbar-link">
-                    <a href="#landing-page" onclick="toggleMenu()" class="navbar-anchor">
-                      <h2>Home</h2>
-                    </a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#about-page" onclick="toggleMenu()" class="navbar-anchor">
-                      <h2>About</h2>
-                    </a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#projects-page" onclick="toggleMenu()" class="navbar-anchor">
-                      <h2>Projects</h2>
-                    </a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#testimonials-page" onclick="toggleMenu()" class="navbar-anchor">
-                      <h2>Testimonials</h2>
-                    </a>
-                </li>
-                <li class="navbar-link">
-                    <a href="#contact-page" onclick="toggleMenu()" class="navbar-anchor">
-                      <h2>Contact</h2>
-                    </a>
-                </li>
-                <div class="nav-footer">
-                    <div class="footer-title">MADE by DEVIN FLEDERMAUS</div>
-                    <div class="social-links">
-                        <a href="https://github.com/Koumori97" target="_blank"><i class="fab fa-github-alt"></i></a>
-                        <a href="https://www.linkedin.com/in/devin-fledermaus-23a091221/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </ul>
-            <div class="box">
-              <h1>DF.</h1>
-            </div>
-            <button class="menu-btn" onclick="toggleNavbar()">
-              <div class="menu-btn__burger"></div>
-            </button>
-        </nav>
         <!-- Landing Page -->
         <section class="landing-page" id="landing-page">
+            <img src="./images/sugar-skull.jpg" alt="banner" class="banner">
             <div class="main-title">
                 <p id="sentence" class="sentence">Hi <span class="wave">👋</span>, I am</p>
                 <span id="feature-text"></span>
                 <span class="input-cursor"></span>
+            </div>
+            <div class="toggle"></div>
+            <!-- Navbar -->
+            <nav>
+                <ul>
+                    <li onclick="scrollUp()"><a href="#">Home</a></li>
+                    <li><a href="#about-page">About</a></li>
+                    <li><a href="#projects-page">Projects</a></li>
+                    <li><a href="#testimonials-page">Testimonials</a></li>
+                    <li><a href="#contact-page">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="box" onclick="scrollUp()">
+                <h1>DF.</h1>
             </div>
         </section>
         <!-- About Me Page -->

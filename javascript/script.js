@@ -54,15 +54,16 @@ const carouselText = [
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
-// NavBar JS
-const menuBtn = document.querySelector('.menu-btn');
-const nsvbarLinks = document.querySelector(".navbar-links li a")
-let menuOpen = false;
-menuBtn.addEventListener('click', () =>  toggleMenu() );
+// Sticky Header JS
+window.addEventListener("scroll",function() {
+    const header = document.querySelector('.landing-page');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
 
-function toggleMenu() {
-  document.getElementsByClassName("navbar-links")[0].classList.toggle("active");
-  menuBtn.classList.toggle("open")
+const navigation = document.querySelector('nav');
+document.querySelector('.toggle').onclick = function() {
+  this.classList.toggle('active');
+  navigation.classList.toggle('active');
 }
 
 // Testimonials Page JS
@@ -130,4 +131,9 @@ for (let i = 0; i < filterButtons.length; i++) {
       }
     }
   })
+}
+
+// Back to top 
+function scrollUp() {
+  document.documentElement.scrollTop = 0;
 }
