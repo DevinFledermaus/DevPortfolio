@@ -587,13 +587,17 @@ nav ul li a:hover {
 .projects-container .card .contentBox .content .proj-buttons button {
     font-size: 1em;
     padding: 4px 0;
-    width: 80px;
+    width: 90px;
     background-color: #000;
     color: #fff;
     border-radius: 10px;
     border: none;
+    transition: 0.5s;
 }
-
+.projects-container .card .contentBox .content .proj-buttons button:hover {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+} 
 
 /* Testimonials */
 .testimonials-page {
@@ -636,6 +640,7 @@ nav ul li a:hover {
     transition: 0.5s;
     justify-content: flex-start;
     align-items: center;
+    border-radius: 5px;
     background: linear-gradient(45deg, #0575E6, #fc4a1a);
 }
 
