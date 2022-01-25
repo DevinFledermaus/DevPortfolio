@@ -216,8 +216,8 @@ nav ul {
     position: relative;
     display: flex;
     transition: 0.25s;
-    transform: translateX(100px);
-    opacity: 0;
+    transform: translateX(800px);
+    opacity: 1;
 }
 .landing-page.sticky nav ul {
     transform: translateX(0);
