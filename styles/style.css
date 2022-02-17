@@ -968,6 +968,20 @@ footer{
     align-items: center;
 }
 
+.files {
+    display: flex;
+    position: absolute;
+    left: 2%;
+    top: 25%;
+    gap: 30px;
+}
+
+.files a {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .social-links {
     display: flex;
     position: absolute;
